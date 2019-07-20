@@ -33,12 +33,6 @@ export default {
     },
     calSum(counterGroupSum){
       this.sum = counterGroupSum;
-    },
-    changeCounterSum(){
-      if(parseInt(this.counterNumber) === 0) {
-        this.sum = 0
-        this.$refs.counterGroup.changeCounterSum();
-      }
     }
   }
 }

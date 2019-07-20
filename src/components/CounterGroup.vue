@@ -23,9 +23,6 @@
                 // console.log(sum)
                 this.counterGroupSum += change;
                 this.$emit('calSum', this.counterGroupSum);
-            },
-            changeCounterSum() {
-                this.counterGroupSum = 0
             }
         }
     }
