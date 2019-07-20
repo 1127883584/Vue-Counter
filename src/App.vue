@@ -1,16 +1,19 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Father msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Father from './components/Father.vue'
+import CounterSum from './components/CounterSum'
+import CounterGroup from './components/CounterGroup'
+import Counter from './components/Counter.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Father
   }
 }
 </script>
