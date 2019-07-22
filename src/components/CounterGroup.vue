@@ -1,6 +1,6 @@
 <template>
     <div class="hello">
-        <counter v-for="item in parseInt(counterNumber)" @calSum="calSum" :sum ="counterGroupSum" :key="item"></counter>
+        <counter v-for="item in parseInt(counterNumber)" @calSum="calSum" :key="item"></counter>
     </div>
 </template>
 
@@ -8,7 +8,7 @@
     import Counter from './Counter'
     export default {
         name: 'Counter',
-        props: ['counterNumber', 'sum'],
+        props: ['counterNumber'],
         components: {
           counter: Counter
         },
@@ -16,13 +16,6 @@
             return {
                 counterGroupSum: this.sum,
                 counterArray: []
-            }
-        },
-        methods: {
-            calSum(change){
-                // console.log(sum)
-                this.counterGroupSum += change;
-                this.$emit('calSum', this.counterGroupSum);
             }
         }
     }

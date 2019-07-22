@@ -9,7 +9,6 @@
 <script>
     export default {
         name: 'Counter',
-        props: ['sum'],
         data(){
             return {
                 count: 0,
@@ -20,24 +19,15 @@
         methods: {
             add(){
                 this.count ++;
-                this.countSum ++;
-                this.change = 1;
-                this.calSum();
+                this.$store.dispatch('changeSum', 1)
             },
             sub() {
-                if(this.count > 0) {
-                    this.count --;
-                    this.countSum --;
-                    this.change = -1;
-                    this.calSum();
-                }
-            },
-            calSum() {
-                this.$emit('calSum', this.change);
+                this.count --;
+                this.$store.dispatch('changeSum', -1)
             }
         },
         beforeDestroy() {
-            this.$emit('calSum', -this.count);
+            this.$store.dispatch('changeSum', -this.count)
         }
     }
 </script>

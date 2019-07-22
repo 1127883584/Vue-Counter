@@ -1,21 +1,12 @@
 <template>
     <div class="hello">
-        <span>sum：{{sum}}</span>
+        <span>sum：{{$store.state.sum}}</span>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'CounterSum',
-        props: ['sum'],
-        data(){
-            return {
-
-            }
-        },
-        methods: {
-
-        }
+        name: 'CounterSum'
     }
 </script>
 

@@ -6,9 +6,6 @@
 
 <script>
 import Father from './components/Father.vue'
-import CounterSum from './components/CounterSum'
-import CounterGroup from './components/CounterGroup'
-import Counter from './components/Counter.vue'
 
 export default {
   name: 'app',
